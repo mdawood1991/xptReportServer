@@ -38,5 +38,25 @@ namespace XptReportServer
         public double TaxRate { get; set; }
         public string CurrencySymbol { get; set; }
         #endregion 
+
+
+        public void SetDefaultReportParameters(int companyId, string companyName, double gmtOffset, DateTime startDateTime,
+                DateTime endDateTime, string logoImageUrl, string websiteUrl)
+        {
+            CompanyId = companyId;
+            CompanyName = companyName;
+            GmtOffset = gmtOffset;
+            StartDate = startDateTime;
+            EndDate = endDateTime;
+
+            LogoImageUrl = logoImageUrl;
+            WebsiteUrl = websiteUrl;
+        }
+
+
+        public void SetAssetReportParameters(int[] assetIds)
+        {
+            SelectedAssets = assetIds;
+        }
     }
 }

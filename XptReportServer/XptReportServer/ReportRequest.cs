@@ -11,6 +11,7 @@ namespace XptReportServer
         public ReportRequest(string reportFileName, int companyId, string language)
         {
             XptReport = new XptReport(reportFileName, companyId, language);
+            ParameterValues = new ReportParameters();
 
             //ParameterValues = new ReportParameters()
             //{
